@@ -1,66 +1,58 @@
----
-title: API Reference
 
-language_tabs:
-  - shell
-  - ruby
-  - python
+# Orders
 
-toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-
-includes:
-  - errors
-
-search: true
----
-
-# Introduction
-
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
+## Submit Order
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+curl http://localhost:3000/api/orders \
+  -d '{
+    "data": {
+      "type": "orders",
+      "attributes": {
+        "vendor-order-id": "cds-0001",
+        "line-items-attributes": [
+          {
+            "line-number": 1,
+            "quantity": 2,
+            "description": "Warm Blanket!",
+            "product-code": "295",
+            "item-properties": {
+              "thread-color": "red",
+              "blah": "blah-2"
+            },
+            "path_to_image": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
+          },
+          {
+            "line-number": 2,
+            "quantity": 5,
+            "description": "Super Soft Pillow!",
+            "product-code": "1029",
+            "item-properties": {
+              "thread-color": "red",
+              "blah": "blah-2"
+            },
+            "path_to_image": "http://images.apple.com/v/home/cj/images/heros/iphone-6s-change_xlarge.jpg"
+          }
+        ],
+        "po": "123",
+        "shipping-method": "321",
+        "bill-name": "Phillip J. Fry",
+        "bill-address1": "123 Green St.",
+        "bill-address2": "Suite 321",
+        "bill-city": "New New York",
+        "bill-state": "CA",
+        "bill-zip": "10012"
+      }
+    }
+  }' \
+  -X POST \
+  -H "Content-Type: application/vnd.api+json" \
+  -H "Accept: application/vnd.api+json; version=2" \
+  -H "api-key: YOUR_API_KEY"
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+## Get All Orders
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
 
 ```ruby
 require 'kittn'
