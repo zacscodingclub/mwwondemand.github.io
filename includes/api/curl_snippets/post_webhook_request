@@ -1,0 +1,14 @@
+<pre class="highlight shell"><code>curl http://localhost:3000/api/orders <span class="se">\</span>
+  -d <span class="s1">'{
+    "data": {
+      "type": "webhooks",
+      "attributes": {
+        "url": "http://localhost:3001/mwwondemand-order-notifications"
+      }
+    }
+  }'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
+  -H <span class="s2">"Accept: application/vnd.api+json; version=2"</span> <span class="se">\</span>
+  -H <span class="s2">"api-key: YOUR_API_KEY"</span>
+</code></pre>
