@@ -1,9 +1,16 @@
-<pre class="highlight shell"><code>curl -i -X POST https://api.mwwondemand.com/api/webhooks <span class="se">\</span>
+<pre class="highlight shell"><code>curl -X PATCH http://localhost:3000/api/webhooks/503678086298993748 <span class="se">\</span>
   -d <span class="s1">'{
     "data": {
+      "id": "503678086298993748",
       "type": "webhooks",
       "attributes": {
-        "url": "https://your-server.com/order-notifications"
+        "url": "http://localhost:3001/mwwondemand-order-notifications",
+        "printed": true,
+        "pressed": true,
+        "cut": true,
+        "sewn": true,
+        "turned": true,
+        "packed": true
       }
     }
   }'</span> <span class="se">\</span>

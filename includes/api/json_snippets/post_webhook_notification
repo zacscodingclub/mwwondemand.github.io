@@ -62,13 +62,13 @@
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"callback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3000/mwwondemand-orders"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"mwwondemand-api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.mwwondemand.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"webhook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://api.mwwondemand.com/webhooks/501323961246680573"</span><span class="w">
+    </span><span class="nt">"callback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/mwwondemand-orders"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"mwwondemand-api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"webhook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/webhooks/501323961246680573"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"mwwondemand-api"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"jsonapi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">

@@ -1,4 +1,4 @@
-<pre class="highlight shell"><code>curl http://localhost:3000/api/orders <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://api.mwwondemand.com/api/orders <span class="se">\</span>
   -d <span class="s1">'{
     "data": {
       "type": "orders",
