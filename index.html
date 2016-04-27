@@ -156,7 +156,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p>The API expects an API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
+<p><code class="prettyprint">Authorization: YOUR_API_KEY</code></p>
 
 <aside class="notice">
 You must replace <code>YOUR_API_KEY</code> with your personal API key.
@@ -442,11 +442,11 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all orders.</p>
 
 <h3 id="https-request">HTTPS Request</h3>
 
-<p><code class="prettyprint">GET https://example.com/api/kittens</code></p>
+<p><code class="prettyprint">GET https://api.mwwondemand.com/api/orders</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -458,22 +458,17 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>include</td>
+<td>none</td>
+<td>If set to line-items, the result will also include line-items.</td>
 </tr>
 </tbody></table>
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a successful request will be an authenticated request!
 </aside>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
+<h2 id="get-a-specific-order">Get a Specific Order</h2>
 
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
@@ -487,7 +482,7 @@ Remember — a happy kitten is an authenticated kitten!
 <span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre>
 
-<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/kittens/2"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.mwwondemand.com/api/order/2"</span>
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre>
 
