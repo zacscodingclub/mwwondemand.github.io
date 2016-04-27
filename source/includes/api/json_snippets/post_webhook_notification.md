@@ -63,13 +63,13 @@
     ]
   },
   "links": {
-    "callback": "http://localhost:3000/mwwondemand-orders",
-    "mwwondemand-api": "http://api.mwwondemand.com",
-    "webhook": "http://api.mwwondemand.com/webhooks/501323961246680573"
+    "callback": "https://api.mwwondemand.com/mwwondemand-orders",
+    "mwwondemand-api": "https://api.mwwondemand.com",
+    "webhook": "https://api.mwwondemand.com/webhooks/501323961246680573"
   },
   "meta": {
     "mwwondemand-api": {
-      "version": 2
+      "version": 1
     }
   },
   "jsonapi": {

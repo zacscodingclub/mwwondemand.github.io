@@ -1,10 +1,10 @@
 ```shell
-curl -i -X POST http://localhost:3000/api/webhooks \
+curl -i -X POST https://api.mwwondemand.com/api/webhooks \
   -d '{
     "data": {
       "type": "webhooks",
       "attributes": {
-        "url": "http://localhost:3001/mwwondemand-order-notifications"
+        "url": "https://your-server.com/order-notifications"
       }
     }
   }' \

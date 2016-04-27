@@ -1,5 +1,5 @@
 ```shell
-curl http://localhost:3000/api/orders \
+curl https://api.mwwondemand.com/api/orders \
   -d '{
     "data": {
       "type": "orders",

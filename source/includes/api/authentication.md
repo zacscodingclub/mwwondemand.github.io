@@ -22,9 +22,9 @@ curl "api_endpoint_here"
 
 > Make sure to replace `YOUR_API_KEY` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Access to the API uses an API key for authentication. You can register a new API key at our [developer portal](https://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+The API expects an API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 

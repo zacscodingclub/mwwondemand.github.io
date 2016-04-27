@@ -4,14 +4,14 @@
     "data": {
       "id": "480226771879331308",
       "type": "orders",
-      "links": { 
-        "self": "http://localhost:3000/api/orders/480226771879331308"
+      "links": {
+        "self": "https://api.mwwondemand.com/api/orders/480226771879331308"
       },
       "attributes": {
         "created-at": "2016-03-08T14:05:15.978Z",
         "updated-at": "2016-03-08T14:05:15.978Z",
         "state":"received",
-        "state-events": [ "invalidate_it", "process_it", "cancel_it"], 
+        "state-events": [ "invalidate_it", "process_it", "cancel_it"],
         "bill-name": "Phillip J. Fry",
         "bill-address1": "123 Green St.",
         "bill-address2": "Suite 321",
@@ -20,7 +20,7 @@
         "bill-country": null,
         "bill-zip": "10012",
         "bill-phone":null,
-        "bill-email":null, 
+        "bill-email":null,
         "ship-name":null,
         "ship-address1": null,
         "ship-address2": null,
@@ -34,21 +34,21 @@
       },
       "relationships": {
         "line-items": {
-          "links": { 
-            "self": "http://localhost:3000/api/orders/480226771879331308/relationships/line-items",
-            "related":"http://localhost:3000/api/orders/480226771879331308/line-items"
+          "links": {
+            "self": "https://api.mwwondemand.com/api/orders/480226771879331308/relationships/line-items",
+            "related":"https://api.mwwondemand.com/api/orders/480226771879331308/line-items"
           }
         },
         "user": {
           "links": {
-            "self": "http://localhost:3000/api/orders/480226771879331308/relationships/user",
-            "related":"http://localhost:3000/api/orders/480226771879331308/user"
+            "self": "https://api.mwwondemand.com/api/orders/480226771879331308/relationships/user",
+            "related":"https://api.mwwondemand.com/api/orders/480226771879331308/user"
           }
         }
       }
     },
     "meta": {
-      "warnings":[ 
+      "warnings":[
         {
           "title": "Param not allowed",
           "detail": "vendor-order-id is not allowed.",

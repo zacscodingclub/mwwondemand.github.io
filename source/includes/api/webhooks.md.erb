@@ -20,9 +20,9 @@ This endpoint will submit a new Web hook record.
 
 <%= partial "includes/api/json_snippets/post_webhook_error.md" %>
 
-### HTTP Request
+### HTTPS Request
 
-`POST http://localhost:3000/api/webhooks`
+`POST https://api.mwwondemand.com/api/webhooks`
 
 
 ### POST Parameters
@@ -63,11 +63,11 @@ Code | Attribute | Description
 
 Shows Web hook attributes.
 
-`GET http://localhost:3000/api/webhooks`
+`GET https://api.mwwondemand.com/api/webhooks`
 
 Or,
 
-`GET http://localhost:3000/api/webhooks/:id`
+`GET https://api.mwwondemand.com/api/webhooks/:id`
 
 <%= partial "includes/api/curl_snippets/get_webhooks_request.md" %>
 
@@ -80,7 +80,7 @@ Or,
 
 Update attributes, e.g. opt-in to receive notifications for additional events.
 
-`GET http://localhost:3000/api/webhooks/:id`
+`GET https://api.mwwondemand.com/api/webhooks/:id`
 
 <%= partial "includes/api/curl_snippets/patch_webhook_request.md" %>
 
@@ -93,7 +93,7 @@ Update attributes, e.g. opt-in to receive notifications for additional events.
 
 Remove customer Web hook.
 
-`GET http://localhost:3000/api/webhooks/:id`
+`GET https://api.mwwondemand.com/api/webhooks/:id`
 
 <%= partial "includes/api/curl_snippets/delete_webhook_request.md" %>
 
