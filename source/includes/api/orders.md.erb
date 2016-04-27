@@ -83,24 +83,23 @@ curl "https://example.com/api/kittens"
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all orders.
 
 ### HTTPS Request
 
-`GET https://example.com/api/kittens`
+`GET https://api.mwwondemand.com/api/orders`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+include | none | If set to line-items, the result will also include line-items.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a successful request will be an authenticated request!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Order
 
 ```ruby
 require 'kittn'
@@ -117,7 +116,7 @@ api.kittens.get(2)
 ```
 
 ```shell
-curl "https://example.com/api/kittens/2"
+curl "https://api.mwwondemand.com/api/order/2"
   -H "Authorization: meowmeowmeow"
 ```
 

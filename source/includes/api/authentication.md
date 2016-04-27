@@ -26,7 +26,7 @@ Access to the API uses an API key for authentication. You can register a new API
 
 The API expects an API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: YOUR_API_KEY`
 
 <aside class="notice">
 You must replace <code>YOUR_API_KEY</code> with your personal API key.
