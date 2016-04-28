@@ -33,13 +33,15 @@ billing-address | string | The billing street plus additional details (suite/apt
 billing-city | string | The billing city of the shipment. If omitted the shipping city will be used.
 billing-state | string | Two digit ISO 3166-2 code of the destination state, ie "US". If omitted the shipping city will be used.
 billing-postal-code | string | The billing postal code of the shipment. If omitted the shipping city will be used.
-line-items-attributes | [] | The root array element describing the item to be ordered.
+line-items-attributes | [] | The root array element describing the item(s) to be ordered.
 line-number | number | Each line should have a line number in incrementing order. If omitted a line number will be automatically assigned.
 quantity | number | The number of items you want to order for a given product.
 description | string | You description of the item. If omitted the default product description will be used.
 product-code | number | The product code of the item to order. See product codes here.
 item-properties | {} | Additional attributes for some products. This can be omitted in most cases. See products for more information.
+designs | [{}] | An array of objects describing information about the artwork to be printed.
 path-to-image | string | A publically accessable path to the source artwork.
+
 
 ## Get All Orders
 
@@ -132,13 +134,13 @@ curl "https://api.mwwondemand.com/api/order/2"
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific order.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTPS Request
 
-`GET https://example.com/kittens/<ID>`
+`GET https://api.mwwondemand.com/orders/YOUR_ID<ID>`
 
 ### URL Parameters
 
