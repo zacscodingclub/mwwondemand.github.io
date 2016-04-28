@@ -145,7 +145,7 @@
 
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+  -H <span class="s2">"Authorization: YOUR_API_KEY"</span>
 </code></pre>
 
 <blockquote>
@@ -368,7 +368,7 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 <tr>
 <td>line-items-attributes</td>
 <td>[]</td>
-<td>The root array element describing the item to be ordered.</td>
+<td>The root array element describing the item(s) to be ordered.</td>
 </tr>
 <tr>
 <td>line-number</td>
@@ -394,6 +394,11 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 <td>item-properties</td>
 <td>{}</td>
 <td>Additional attributes for some products. This can be omitted in most cases. See products for more information.</td>
+</tr>
+<tr>
+<td>designs</td>
+<td>[{}]</td>
+<td>An array of objects describing information about the artwork to be printed.</td>
 </tr>
 <tr>
 <td>path-to-image</td>
@@ -499,13 +504,13 @@ Remember — a successful request will be an authenticated request!
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves a specific kitten.</p>
+<p>This endpoint retrieves a specific order.</p>
 
 <aside class="warning">Inside HTML code blocks like this one, you can&rsquo;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 <h3 id="https-request">HTTPS Request</h3>
 
-<p><code class="prettyprint">GET https://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET https://api.mwwondemand.com/orders/YOUR_ID&lt;ID&gt;</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
