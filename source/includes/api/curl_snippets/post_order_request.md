@@ -23,7 +23,7 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
       "attributes": {
         "line-number": 1,
         "quantity": 2,
-        "description": "It\'s not sò fluffy!",
+        "description": "It's not sò fluffy!",
         "product-code": "293",
         "po": 312,
         "item-properties": {
@@ -44,7 +44,7 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
       "attributes": {
         "line-number": 2,
         "quantity": 5,
-        "description": "It\'s sò fluffy!",
+        "description": "It's sò fluffy!",
         "product-code": "294",
         "po": 312,
         "item-properties": {
