@@ -1,56 +1,59 @@
-
 ```json
-  {
-    "data": {
-      "id": "480226771879331308",
-      "type": "orders",
-      "links": {
-        "self": "https://api.mwwondemand.com/api/orders/480226771879331308"
+{
+  "data": {
+    "attributes": {
+      "billing-address": "123 Green St.\nSuite 321",
+      "billing-city": "New New York",
+      "billing-country": null,
+      "billing-email": null,
+      "billing-name": "Hubert J. Farnsworth",
+      "billing-phone": null,
+      "billing-postal-code": "10012",
+      "billing-state": "NY",
+      "created-at": "2016-05-20T13:13:29.485Z",
+      "shipping-address": "123 Green St.\nSuite 321",
+      "shipping-city": "New New York",
+      "shipping-country": null,
+      "shipping-email": null,
+      "shipping-method": "SAMPLE",
+      "shipping-name": "Phillip J. Fry",
+      "shipping-phone": null,
+      "shipping-postal-code": "10012",
+      "shipping-state": "NY",
+      "state": "received",
+      "state-events": [
+        "invalidate_it",
+        "process_it",
+        "cancel_it"
+      ],
+      "updated-at": "2016-05-20T13:13:29.485Z",
+      "vendor-po": "dcbfdc59b8b51bbb530f0299b6db25c7"
+    },
+    "id": "533109340861629455",
+    "links": {
+      "self": "https://api.mwwondemand.com/api/orders/533109340861629455"
+    },
+    "relationships": {
+      "line-item-views": {
+        "links": {
+          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/line-item-views",
+          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-item-views"
+        }
       },
-      "attributes": {
-        "created-at": "2016-03-08T14:05:15.978Z",
-        "updated-at": "2016-03-08T14:05:15.978Z",
-        "state": "received",
-        "state-events": [ "invalidate_it", "process_it", "cancel_it"],
-        "billing-name": "Phillip J. Fry",
-        "billing-address": "123 Green St.\nSuite 321",
-        "billing-city": "New New York",
-        "billing-state": "CA",
-        "billing-country": null,
-        "billing-postal-code": "10012",
-        "billing-phone": null,
-        "billing-email": null,
-        "shipping-name": null,
-        "shipping-address": "123 Green St.\nSuite 321",
-        "shipping-city": "New New York",
-        "shipping-state": "CA",
-        "shipping-postal-code": "10012",
-        "shipping-country": null,
-        "shipping-phone": null,
-        "shipping-email": null,
-        "shipping-method": "321",
-        "vendor-po": "1234567890"
+      "line-items": {
+        "links": {
+          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/line-items",
+          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-items"
+        }
       },
-      "relationships": {
-        "line-items": {
-          "links": {
-            "self": "https://api.mwwondemand.com/api/orders/480226771879331308/relationships/line-items",
-            "related":"https://api.mwwondemand.com/api/orders/480226771879331308/line-items"
-          }
-        },
-        "line-item-views": {
-          "links": {
-            "self": "https://api.mwwondemand.com/api/orders/525951654449644579/relationships/line-item-views",
-            "related": "https://api.mwwondemand.com/api/orders/525951654449644579/line-item-views"
-          }
-        },
-        "user": {
-          "links": {
-            "self": "https://api.mwwondemand.com/api/orders/480226771879331308/relationships/user",
-            "related":"https://api.mwwondemand.com/api/orders/480226771879331308/user"
-          }
+      "user": {
+        "links": {
+          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/user",
+          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/user"
         }
       }
-    }
+    },
+    "type": "orders"
   }
+}
 ```
