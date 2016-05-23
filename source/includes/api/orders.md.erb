@@ -101,9 +101,9 @@ Remember — a successful request will be an authenticated request!
 <%= partial "includes/api/json_snippets/get_specific_order_response.md" %>
 
 ```ruby
-require 'kittn'
+require 'mww'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Mww::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
 ```
 
