@@ -23,18 +23,14 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
       "attributes": {
         "line-number": 1,
         "quantity": 2,
-        "description": "It's not sò fluffy!",
+        "description": "Awesome Item",
         "product-code": "293",
-        "po": 312,
         "item-properties": {
-          "thread-color": "red",
-          "blah": "blah-2"
+          "comming": "soon"
         },
         "designs": [
           {
-            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg",
-            "position": "centered",
-            "crop": "left"
+            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
           }
         ]
       }
@@ -44,12 +40,10 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
       "attributes": {
         "line-number": 2,
         "quantity": 5,
-        "description": "It's sò fluffy!",
+        "description": "Sò fluffy!",
         "product-code": "294",
-        "po": 312,
         "item-properties": {
-          "thread-color": "red",
-          "blah": "blah-2"
+          "comming": "soon"
         },
         "designs": [
           {
