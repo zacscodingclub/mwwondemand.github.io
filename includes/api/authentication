@@ -24,7 +24,9 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 <p>Make sure to replace <code class="prettyprint">YOUR_API_KEY</code> with your API key.</p>
 </blockquote>
 
-<p>Access to the API uses an API key for authentication. You can register a new API key at our <a href="https://dashboard.mwwondemand.com">customer dashboard</a>.</p>
+<p>Access to the API uses an API key for authentication. You can register a new API key at <a href="https://api.mwwondemand.com/account/">https://api.mwwondemand.com/account/</a>.</p>
+
+<p>After you register, you can view your API key at <a href="https://api.mwwondemand.com/account/user/api-key">https://api.mwwondemand.com/account/user/api-key</a>.</p>
 
 <p>The API expects an API key to be included in all API requests to the server in a header that looks like the following:</p>
 
@@ -33,6 +35,45 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 <aside class="notice">
 You must replace <code>YOUR_API_KEY</code> with your personal API key.
 </aside>
+
+<h2 id="regenerate-your-api-key">Regenerate Your API Key</h2>
+
+<blockquote>
+<p>To expire your existing api-key and generate a new one, use this code:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X PATCH https://api.mwwondemand.com/api/regenerate-api-key <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
+  -H <span class="s2">"Accept: application/vnd.api+json; version=1"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: auth-key=YOUR_EXISTING_API_KEY"</span>
+</code></pre>
+
+<blockquote>
+<p>Make sure to replace <code class="prettyprint">YOUR_EXISTING_API_KEY</code> with your existing API key.
+The above command returns a response like:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>HTTP/1.1 200 OK
+Authorization: auth-key=YOUR_NEW_API_KEY
+Content-Type: application/json; charset=utf-8
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_USER_ID"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_NEW_API_KEY"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>To change your API key make a PATCH request using the <code class="prettyprint">api/regenerate-api-key</code> endpoint.</p>
+
+<ul>
+<li>Requires your existing API Key in the <code class="prettyprint">Authorization</code> Header</li>
+<li>Response Header and body include your newly generated <code class="prettyprint">api-key</code></li>
+</ul>
+
+<p>Also, you can regenerate the key at <a href="https://api.mwwondemand.com/account/user/api-key">https://api.mwwondemand.com/account/user/api-key</a>.</p>
 
 <h2 id="bearer-token">Bearer Token</h2>
 

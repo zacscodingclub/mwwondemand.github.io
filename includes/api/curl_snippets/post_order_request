@@ -50,6 +50,12 @@
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
+    <span class="o">}</span>,
+    <span class="o">{</span> 
+      <span class="s2">"type"</span>: <span class="s2">"pack-list"</span>,
+      <span class="s2">"attributes"</span>: <span class="o">{</span>
+        <span class="s2">"url"</span>: <span class="s2">"https://images.YOURSTORAGELOCATION.com/packing_lists/123412341234.pdf"</span>
+        <span class="o">}</span>
     <span class="o">}</span>
   <span class="o">]</span>
 <span class="o">}</span><span class="s1">'
