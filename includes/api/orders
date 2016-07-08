@@ -2,38 +2,66 @@
 
 <h2 id="submit-order">Submit Order</h2>
 
-<pre class="highlight shell"><code>curl -X <span class="s2">"POST"</span> <span class="s2">"https://api.mwwondemand.com:443/api/orders"</span> <span class="se">\</span>
+<pre class="highlight shell"><code>curl -X <span class="s2">"POST"</span> <span class="s2">"http://api.mwwondemand.com/api/orders"</span> <span class="se">\</span>
   -H <span class="s2">"Accept: application/vnd.api+json; version=1"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: auth-key=YOU_API_KEY"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: auth-key=YOUR_API_KEY"</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/vnd.api+json"</span> <span class="se">\</span>
   -d <span class="nv">$'</span><span class="o">{</span>
-  <span class="s2">"data"</span>: <span class="o">{</span>
+ <span class="s2">"data"</span>: <span class="o">{</span>
     <span class="s2">"type"</span>: <span class="s2">"orders"</span>,
     <span class="s2">"attributes"</span>: <span class="o">{</span>
-      <span class="s2">"vendor-po"</span>: <span class="s2">"dcbfdc59b8b51bbb530f0299b6db25c7"</span>,
-      <span class="s2">"shipping-method"</span>: <span class="s2">"SAMPLE"</span>,
-      <span class="s2">"shipping-name"</span>: <span class="s2">"Phillip J. Fry"</span>,
-      <span class="s2">"shipping-address"</span>: <span class="s2">"123 Green St.</span><span class="se">\\</span><span class="s2">nSuite 321"</span>,
-      <span class="s2">"shipping-city"</span>: <span class="s2">"New New York"</span>,
-      <span class="s2">"shipping-state"</span>: <span class="s2">"NY"</span>,
-      <span class="s2">"shipping-postal-code"</span>: <span class="s2">"10012"</span>,
-      <span class="s2">"billing-name"</span>: <span class="s2">"Hubert J. Farnsworth"</span>
+      <span class="s2">"vendor-po"</span>: <span class="s2">"1467988109"</span>,
+      <span class="s2">"shipping-method"</span>: <span class="s2">"SAMPLE"</span>
     <span class="o">}</span>
   <span class="o">}</span>,
   <span class="s2">"included"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"type"</span>: <span class="s2">"shipping-address"</span>,
+      <span class="s2">"attributes"</span>: <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"Phillip J. Fry"</span>,
+      <span class="s2">"address"</span>: <span class="s2">"123 Green St.</span><span class="se">\n</span><span class="s2">Suite 321"</span>,
+        <span class="s2">"city"</span>: <span class="s2">"New New York"</span>,
+        <span class="s2">"state"</span>: <span class="s2">"NY"</span>,
+        <span class="s2">"postal-code"</span>: <span class="s2">"10012"</span>
+      <span class="o">}</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"type"</span>: <span class="s2">"billing-address"</span>,
+      <span class="s2">"attributes"</span>: <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"Hubert Farnsworth"</span>,
+      <span class="s2">"address"</span>: <span class="s2">"123 Green St.</span><span class="se">\n</span><span class="s2">Suite 321"</span>,
+        <span class="s2">"city"</span>: <span class="s2">"New New York"</span>,
+        <span class="s2">"state"</span>: <span class="s2">"NY"</span>,
+        <span class="s2">"postal-code"</span>: <span class="s2">"10012"</span>
+      <span class="o">}</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"type"</span>: <span class="s2">"return-address"</span>,
+      <span class="s2">"attributes"</span>: <span class="o">{</span>
+      <span class="s2">"name"</span>: <span class="s2">"Bender B. Rodriguez"</span>,
+      <span class="s2">"address"</span>: <span class="s2">"123 Green St.</span><span class="se">\n</span><span class="s2">Suite 321"</span>,
+        <span class="s2">"city"</span>: <span class="s2">"New New York"</span>,
+        <span class="s2">"state"</span>: <span class="s2">"NY"</span>,
+        <span class="s2">"postal-code"</span>: <span class="s2">"10012"</span>
+      <span class="o">}</span>
+    <span class="o">}</span>,
     <span class="o">{</span>
       <span class="s2">"type"</span>: <span class="s2">"line-items"</span>,
       <span class="s2">"attributes"</span>: <span class="o">{</span>
         <span class="s2">"line-number"</span>: 1,
         <span class="s2">"quantity"</span>: 2,
-        <span class="s2">"description"</span>: <span class="s2">"Awesome Item"</span>,
-        <span class="s2">"product-code"</span>: <span class="s2">"293"</span>,
+        <span class="s2">"description"</span>: <span class="s2">"It</span><span class="se">\'</span><span class="s2">s not sò fluffy!"</span>,
+        <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
+        <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
-          <span class="s2">"comming"</span>: <span class="s2">"soon"</span>
+          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>,
+          <span class="s2">"blah"</span>: <span class="s2">"blah-2"</span>
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
-            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>
+            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>,
+            <span class="s2">"position"</span>: <span class="s2">"centered"</span>,
+            <span class="s2">"crop"</span>: <span class="s2">"left"</span>
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
@@ -43,10 +71,12 @@
       <span class="s2">"attributes"</span>: <span class="o">{</span>
         <span class="s2">"line-number"</span>: 2,
         <span class="s2">"quantity"</span>: 5,
-        <span class="s2">"description"</span>: <span class="s2">"Sò fluffy!"</span>,
-        <span class="s2">"product-code"</span>: <span class="s2">"294"</span>,
+        <span class="s2">"description"</span>: <span class="s2">"Velour Vest"</span>,
+        <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
+        <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
-          <span class="s2">"comming"</span>: <span class="s2">"soon"</span>
+          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>,
+          <span class="s2">"blah"</span>: <span class="s2">"blah-2"</span>
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
@@ -55,11 +85,17 @@
         <span class="o">]</span>
       <span class="o">}</span>
     <span class="o">}</span>,
-    <span class="o">{</span> 
-      <span class="s2">"type"</span>: <span class="s2">"pack-list"</span>,
+    <span class="o">{</span>
+      <span class="s2">"type"</span>: <span class="s2">"packing-list"</span>,
       <span class="s2">"attributes"</span>: <span class="o">{</span>
-        <span class="s2">"url"</span>: <span class="s2">"https://images.YOURSTORAGELOCATION.com/packing_lists/123412341234.pdf"</span>
-        <span class="o">}</span>
+        <span class="s2">"url"</span>: <span class="s2">"http://www.akapparel.com/assets/production-pdf/110-160511-050-2.pdf"</span>
+       <span class="o">}</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+      <span class="s2">"type"</span>: <span class="s2">"shipping-label"</span>,
+      <span class="s2">"attributes"</span>: <span class="o">{</span>
+       <span class="s2">"url"</span>: <span class="s2">"https://hellofabric.com/assets/mww/orders/86667297/56d712af0897d-86667297-MWWA1411.png"</span>
+      <span class="o">}</span>
     <span class="o">}</span>
   <span class="o">]</span>
 <span class="o">}</span><span class="s1">'
@@ -71,65 +107,68 @@
 
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"billing-address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Green St.\nSuite 321"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New New York"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hubert J. Farnsworth"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-postal-code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10012"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"billing-state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-20T13:13:29.485Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Green St.\nSuite 321"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New New York"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAMPLE"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Phillip J. Fry"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-postal-code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10012"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping-state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"received"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"state-events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="s2">"invalidate_it"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"process_it"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"cancel_it"</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="nt">"updated-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-20T13:13:29.485Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"vendor-po"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dcbfdc59b8b51bbb530f0299b6db25c7"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"533109340861629455"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"568129875827754040"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455"</span><span class="w">
+      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-07T20:53:02.578Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"updated-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-07T20:53:02.578Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"received"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"shipping-method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAMPLE"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"vendor-po"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1467924781"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"line-item-views"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/line-item-views"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-item-views"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">},</span><span class="w">
       </span><span class="nt">"line-items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/line-items"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-items"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/line-items"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/line-items"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"line-item-views"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/line-item-views"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/line-item-views"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/user"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/relationships/user"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/user"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/user"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"pack-list"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"packing-list"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/relationships/pack-list"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/533109340861629455/pack-list"</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/packing-list"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/packing-list"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"shipping-label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/shipping-label"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/shipping-label"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"billing-address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/billing-address"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/billing-address"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"shipping-address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/shipping-address"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/shipping-address"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"return-address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/relationships/return-address"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"related"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.mwwondemand.com/api/orders/568129875827754040/return-address"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -177,54 +216,9 @@
 <td>The shipping carrier and method for the order. For example, use USPSF for USPS First Class. See shipping methods.</td>
 </tr>
 <tr>
-<td>shipping-name</td>
-<td>string</td>
-<td>The name to reference the shipping details</td>
-</tr>
-<tr>
-<td>shipping-address</td>
-<td>string</td>
-<td>The destination street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return &ldquo;\n&rdquo;.</td>
-</tr>
-<tr>
-<td>shipping-city</td>
-<td>string</td>
-<td>The destination city of the shipment.</td>
-</tr>
-<tr>
-<td>shipping-state</td>
-<td>string</td>
-<td>Two digit ISO 3166-2 code of the destination state, ie &ldquo;US&rdquo;.</td>
-</tr>
-<tr>
-<td>shipping-postal-code</td>
-<td>string</td>
-<td>The destination postal code of the shipment.</td>
-</tr>
-<tr>
-<td>billing-name</td>
-<td>string</td>
-<td>The name to reference the billing details</td>
-</tr>
-<tr>
-<td>billing-address</td>
-<td>string</td>
-<td>The billing street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return &ldquo;\n&rdquo;. If omitted the shipping address will be used.</td>
-</tr>
-<tr>
-<td>billing-city</td>
-<td>string</td>
-<td>The billing city of the shipment. If omitted the shipping city will be used.</td>
-</tr>
-<tr>
-<td>billing-state</td>
-<td>string</td>
-<td>Two digit ISO 3166-2 code of the destination state, ie &ldquo;US&rdquo;. If omitted the shipping city will be used.</td>
-</tr>
-<tr>
-<td>billing-postal-code</td>
-<td>string</td>
-<td>The billing postal code of the shipment. If omitted the shipping city will be used.</td>
+<td>included</td>
+<td>[{}]</td>
+<td>The array element describing the item(s) to be included in the order.</td>
 </tr>
 </tbody></table>
 
@@ -237,11 +231,6 @@
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>included</td>
-<td>[{}]</td>
-<td>The array element describing the item(s) to be included in the order.</td>
-</tr>
 <tr>
 <td>type</td>
 <td>line-items</td>
@@ -289,7 +278,50 @@
 </tr>
 </tbody></table>
 
-<p><em>Packing List details</em></p>
+<p><em>Shipping details</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default / Type *</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>shipping-address</td>
+<td>Shipping address is required.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name to reference the shipment details</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>The shipment street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return &ldquo;\n&rdquo;.</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td>The city of the shipment.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>Two digit ISO 3166-2 code of the destination state, ie &ldquo;US&rdquo;.</td>
+</tr>
+<tr>
+<td>postal-code</td>
+<td>string</td>
+<td>The postal code of the shipment.</td>
+</tr>
+</tbody></table>
+
+<p>* An object with type billing-address or return-address may also be proivided. If they are not provided shipping-address will be used as the default.</p>
+
+<p><em>Packing List Details (optional)</em></p>
 
 <table><thead>
 <tr>
@@ -298,11 +330,6 @@
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>included</td>
-<td>[{}]</td>
-<td>The array element describing the item(s) to be included in the order.</td>
-</tr>
 <tr>
 <td>type</td>
 <td>pack-list</td>
@@ -316,7 +343,33 @@
 <tr>
 <td>url</td>
 <td>string</td>
-<td>Publicly accessible path to image file (PDF) for the order&rsquo;s packing list</td>
+<td>Publicly accessible path to image file (or PDF) for the order&rsquo;s packing list.</td>
+</tr>
+</tbody></table>
+
+<p><em>Shipping Label Details (optional)</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default / Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>shipping-label</td>
+<td>Resource the object represents.</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td>{}</td>
+<td>The object that contains all the pertanent information about the line-item resource.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>string</td>
+<td>Publicly accessible path to image file (or PDF) for the order&rsquo;s shipping label.</td>
 </tr>
 </tbody></table>
 
