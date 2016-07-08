@@ -1,36 +1,64 @@
 ```shell
-curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
+curl -X "POST" "http://api.mwwondemand.com/api/orders" \
   -H "Accept: application/vnd.api+json; version=1" \
-  -H "Authorization: auth-key=YOU_API_KEY" \
+  -H "Authorization: auth-key=YOUR_API_KEY" \
   -H "Content-Type: application/vnd.api+json" \
   -d $'{
-  "data": {
+ "data": {
     "type": "orders",
     "attributes": {
-      "vendor-po": "dcbfdc59b8b51bbb530f0299b6db25c7",
-      "shipping-method": "SAMPLE",
-      "shipping-name": "Phillip J. Fry",
-      "shipping-address": "123 Green St.\\nSuite 321",
-      "shipping-city": "New New York",
-      "shipping-state": "NY",
-      "shipping-postal-code": "10012",
-      "billing-name": "Hubert J. Farnsworth"
+      "vendor-po": "1467988109",
+      "shipping-method": "SAMPLE"
     }
   },
   "included": [
+    {
+      "type": "shipping-address",
+      "attributes": {
+      "name": "Phillip J. Fry",
+      "address": "123 Green St.\nSuite 321",
+        "city": "New New York",
+        "state": "NY",
+        "postal-code": "10012"
+      }
+    },
+    {
+      "type": "billing-address",
+      "attributes": {
+      "name": "Hubert Farnsworth",
+      "address": "123 Green St.\nSuite 321",
+        "city": "New New York",
+        "state": "NY",
+        "postal-code": "10012"
+      }
+    },
+    {
+      "type": "return-address",
+      "attributes": {
+      "name": "Bender B. Rodriguez",
+      "address": "123 Green St.\nSuite 321",
+        "city": "New New York",
+        "state": "NY",
+        "postal-code": "10012"
+      }
+    },
     {
       "type": "line-items",
       "attributes": {
         "line-number": 1,
         "quantity": 2,
-        "description": "Awesome Item",
-        "product-code": "293",
+        "description": "It\'s not sò fluffy!",
+        "specification-id": "1720",
+        "po": 312,
         "item-properties": {
-          "comming": "soon"
+          "thread-color": "white",
+          "blah": "blah-2"
         },
         "designs": [
           {
-            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
+            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg",
+            "position": "centered",
+            "crop": "left"
           }
         ]
       }
@@ -40,10 +68,12 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
       "attributes": {
         "line-number": 2,
         "quantity": 5,
-        "description": "Sò fluffy!",
-        "product-code": "294",
+        "description": "Velour Vest",
+        "specification-id": "1720",
+        "po": 312,
         "item-properties": {
-          "comming": "soon"
+          "thread-color": "white",
+          "blah": "blah-2"
         },
         "designs": [
           {
@@ -52,12 +82,19 @@ curl -X "POST" "https://api.mwwondemand.com:443/api/orders" \
         ]
       }
     },
-    { 
-      "type": "pack-list",
+    {
+      "type": "packing-list",
       "attributes": {
-        "url": "https://images.YOURSTORAGELOCATION.com/packing_lists/123412341234.pdf"
-        }
+        "url": "http://www.akapparel.com/assets/production-pdf/110-160511-050-2.pdf"
+       }
+      },
+      {
+      "type": "shipping-label",
+      "attributes": {
+       "url": "https://hellofabric.com/assets/mww/orders/86667297/56d712af0897d-86667297-MWWA1411.png"
+      }
     }
   ]
 }'
 ```
+

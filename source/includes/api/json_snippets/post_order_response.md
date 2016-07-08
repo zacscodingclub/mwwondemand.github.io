@@ -1,65 +1,68 @@
 ```json
 {
   "data": {
-    "attributes": {
-      "billing-address": "123 Green St.\nSuite 321",
-      "billing-city": "New New York",
-      "billing-country": null,
-      "billing-email": null,
-      "billing-name": "Hubert J. Farnsworth",
-      "billing-phone": null,
-      "billing-postal-code": "10012",
-      "billing-state": "NY",
-      "created-at": "2016-05-20T13:13:29.485Z",
-      "shipping-address": "123 Green St.\nSuite 321",
-      "shipping-city": "New New York",
-      "shipping-country": null,
-      "shipping-email": null,
-      "shipping-method": "SAMPLE",
-      "shipping-name": "Phillip J. Fry",
-      "shipping-phone": null,
-      "shipping-postal-code": "10012",
-      "shipping-state": "NY",
-      "state": "received",
-      "state-events": [
-        "invalidate_it",
-        "process_it",
-        "cancel_it"
-      ],
-      "updated-at": "2016-05-20T13:13:29.485Z",
-      "vendor-po": "dcbfdc59b8b51bbb530f0299b6db25c7"
-    },
-    "id": "533109340861629455",
+    "id": "568129875827754040",
+    "type": "orders",
     "links": {
-      "self": "https://api.mwwondemand.com/api/orders/533109340861629455"
+      "self": "https://api.mwwondemand.com/api/orders/568129875827754040"
+    },
+    "attributes": {
+      "created-at": "2016-07-07T20:53:02.578Z",
+      "updated-at": "2016-07-07T20:53:02.578Z",
+      "state": "received",
+      "shipping-method": "SAMPLE",
+      "vendor-po": "1467924781"
     },
     "relationships": {
-      "line-item-views": {
-        "links": {
-          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/line-item-views",
-          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-item-views"
-        }
-      },
       "line-items": {
         "links": {
-          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/line-items",
-          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/line-items"
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/line-items",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/line-items"
+        }
+      },
+      "line-item-views": {
+        "links": {
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/line-item-views",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/line-item-views"
         }
       },
       "user": {
         "links": {
-          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/user",
-          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/user"
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/user",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/user"
         }
       },
-      "pack-list": {
+      "packing-list": {
         "links": {
-          "self": "https://api.mwwondemand.com/api/orders/533109340861629455/relationships/pack-list",
-          "related": "https://api.mwwondemand.com/api/orders/533109340861629455/pack-list"
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/packing-list",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/packing-list"
+        }
+      },
+      "shipping-label": {
+        "links": {
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/shipping-label",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/shipping-label"
+        }
+      },
+      "billing-address": {
+        "links": {
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/billing-address",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/billing-address"
+        }
+      },
+      "shipping-address": {
+        "links": {
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/shipping-address",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/shipping-address"
+        }
+      },
+      "return-address": {
+        "links": {
+          "self": "https://api.mwwondemand.com/api/orders/568129875827754040/relationships/return-address",
+          "related": "https://api.mwwondemand.com/api/orders/568129875827754040/return-address"
         }
       }
-    },
-    "type": "orders"
+    }
   }
 }
 ```

@@ -26,22 +26,12 @@ type | orders | Resource the object represents.
 attributes | {} | The object that contains all the pertanent information about the order.
 vendor-po | required (string / number) | Your PO number. This string/number must be unique with every order.
 shipping-method | string | The shipping carrier and method for the order. For example, use USPSF for USPS First Class. See shipping methods.
-shipping-name | string | The name to reference the shipping details
-shipping-address | string | The destination street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return "\n".
-shipping-city | string | The destination city of the shipment.
-shipping-state | string | Two digit ISO 3166-2 code of the destination state, ie "US".
-shipping-postal-code | string | The destination postal code of the shipment.
-billing-name | string | The name to reference the billing details
-billing-address | string | The billing street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return "\n". If omitted the shipping address will be used.
-billing-city | string | The billing city of the shipment. If omitted the shipping city will be used.
-billing-state | string | Two digit ISO 3166-2 code of the destination state, ie "US". If omitted the shipping city will be used.
-billing-postal-code | string | The billing postal code of the shipment. If omitted the shipping city will be used.
+included | [{}] | The array element describing the item(s) to be included in the order.
 
 *Line Item details*
 
 Parameter | Default / Type | Description
 --------- | ------- | -----------
-included | [{}] | The array element describing the item(s) to be included in the order.
 type | line-items | Resource the object represents.
 attributes | {} | The object that contains all the pertanent information about the line-item resource.
 line-number | number | Each line should have a line number in incrementing order. If omitted a line number will be automatically assigned.
@@ -52,14 +42,35 @@ item-properties | {} | Additional attributes for some products. This can be omit
 designs | [{}] | An array of objects describing information about the artwork to be printed.
 path-to-image | string | A publically accessible path to the source artwork.
 
-*Packing List details*
+*Shipping details*
+
+Parameter | Default / Type \* | Description
+--------- | ------- | -----------
+type | shipping-address | Shipping address is required.
+name | string | The name to reference the shipment details
+address | string | The shipment street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return "\n".
+city | string | The city of the shipment.
+state | string | Two digit ISO 3166-2 code of the destination state, ie "US".
+postal-code | string | The postal code of the shipment.
+
+\* An object with type billing-address or return-address may also be proivided. If they are not provided shipping-address will be used as the default.
+
+*Packing List Details (optional)*
 
 Parameter | Default / Type | Description
 --------- | ------- | -----------
-included | [{}] | The array element describing the item(s) to be included in the order.
 type | pack-list | Resource the object represents.
 attributes | {} | The object that contains all the pertanent information about the line-item resource.
-url | string | Publicly accessible path to image file (PDF) for the order's packing list
+url | string | Publicly accessible path to image file (or PDF) for the order's packing list.
+
+*Shipping Label Details (optional)*
+
+Parameter | Default / Type | Description
+--------- | ------- | -----------
+type | shipping-label | Resource the object represents.
+attributes | {} | The object that contains all the pertanent information about the line-item resource.
+url | string | Publicly accessible path to image file (or PDF) for the order's shipping label.
+
 
 *Note: This endpoint follows the [JSON API 1.0 Spec](http://jsonapi.org/format/1.0/), and also allows included items when creating the order.*
 
