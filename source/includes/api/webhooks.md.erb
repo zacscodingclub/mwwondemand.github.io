@@ -27,24 +27,24 @@ This endpoint will submit a new Web hook record.
 
 ### POST Parameters
 
-Parameter | Default / Type | Description
+Attributes ||
 --------- | ------- | -----------
-data | {} | The root element of your JSON post object.
-type | webhooks | Resource the object represents.
-attributes | {} | The object that contains all the pertanent information about the order.
-attributes[url] | nil | String: the URL to receive callback notifications
-attributes[enabled] | true | Boolean: Pause notifications by setting false
-attributes[received] | true | Boolean: Fired when order is received
-attributes[design-downloaded] | false | Boolean: Fired after item design downloaded
-attributes[processed] | true | Boolean: Fired after processing complete for order/items
-attributes[shipped] | true | Boolean: Fired when an order/item ships
-attributes[cancelled] | true | Boolean: Fired when an order/item is cancelled
-attributes[printed] | false | Boolean: Fired after an item is printed
-attributes[pressed] | false | Boolean: Fired after an item is pressed
-attributes[cut] | false | Boolean: Fired after an item is cut
-attributes[sewn] | false | Boolean: Fired after an item is sewn
-attributes[turned] | false | Boolean: Fired after an item is turned
-attributes[packed] | false | Boolean: Fired after an item is packed
+data <br><em>object</em> | The root element of your JSON post object.
+type <br><em>string</em> | Resource the object represents. This will always be "webhooks".
+attributes | object | The object that contains all the pertanent information about the order.
+url <br><em>string</em> | The URL to receive callback notifications.
+enabled <br><em>boolean</em> | Pause notifications by setting false.
+received <br><em>boolean</em> | Fired when order is received.
+designdwnloaded<br><em>boolean</em> | Fired after item design downloaded.
+processed <br><em>boolean</em> | Fired after processing complete for order/items.
+shipped <br><em>boolean</em> | Fired when an order/item ships.
+cancelled <br><em>boolean</em> | Fired when an order/item is cancelled.
+printed <br><em>boolean</em> | Fired after an item is printed.
+pressed <br><em>boolean</em> | Fired after an item is pressed.
+cut <br><em>boolean</em> | Fired after an item is cut.
+sewn <br><em>boolean</em> | Fired after an item is sewn.
+turned <br><em>boolean</em> | Fired after an item is turned.
+packed <br><em>boolean</em> | Fired after an item is packed.
 
 *Note: This endpoint follows the [JSON API 1.0 Spec](http://jsonapi.org/format/1.0/)*
 

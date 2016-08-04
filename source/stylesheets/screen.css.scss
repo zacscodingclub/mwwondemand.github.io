@@ -424,6 +424,13 @@ html, body {
 
     td {
       padding: 10px;
+      &:first-of-type {
+        font-weight: bold;
+      }
+      em {
+        color: #9a9a9a;
+        font-style: normal;
+      }
     }
 
     tr:last-child {
