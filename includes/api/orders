@@ -54,14 +54,11 @@
         <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
         <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
-          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>,
-          <span class="s2">"blah"</span>: <span class="s2">"blah-2"</span>
+          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
-            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>,
-            <span class="s2">"position"</span>: <span class="s2">"centered"</span>,
-            <span class="s2">"crop"</span>: <span class="s2">"left"</span>
+            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
@@ -75,8 +72,7 @@
         <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
         <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
-          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>,
-          <span class="s2">"blah"</span>: <span class="s2">"blah-2"</span>
+          <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
@@ -257,9 +253,9 @@
 <td>You description of the item. If omitted the default product description will be used.</td>
 </tr>
 <tr>
-<td>product-code</td>
+<td>specification-id</td>
 <td>number</td>
-<td>The product code of the item to order. See product codes here.</td>
+<td>The products specification id of the item to order. See product codes here.</td>
 </tr>
 <tr>
 <td>item-properties</td>
@@ -272,7 +268,7 @@
 <td>An array of objects describing information about the artwork to be printed.</td>
 </tr>
 <tr>
-<td>path-to-image</td>
+<td>image_remote_url</td>
 <td>string</td>
 <td>A publically accessible path to the source artwork.</td>
 </tr>
