@@ -138,24 +138,20 @@ Content-Type: application/json; charset=utf-8
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>api_user</td>
-<td>{}</td>
+<td>api_user <br><em>object</em></td>
 <td>The scope for the session request.</td>
 </tr>
 <tr>
-<td>email</td>
-<td>string</td>
+<td>email <br><em>string</em></td>
 <td>Your username is your email.</td>
 </tr>
 <tr>
-<td>password</td>
-<td>string</td>
+<td>password <br><em>string</em></td>
 <td>Your customer dashboard password.</td>
 </tr>
 </tbody></table>

@@ -175,45 +175,38 @@
 
 <p><code class="prettyprint">POST https://api.mwwondemand.com/api/orders</code></p>
 
-<h3 id="post-parameters">Post Parameters</h3>
+<h3 id="post-parameters">POST Parameters</h3>
 
 <p><em>Order details</em></p>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>data</td>
-<td>{}</td>
+<td>data <br><em>object</em></td>
 <td>The root element of your JSON post object.</td>
 </tr>
 <tr>
-<td>type</td>
-<td>orders</td>
-<td>Resource the object represents.</td>
+<td>type <br><em>string</em></td>
+<td>Resource the object represents. This will always be &ldquo;orders&rdquo;.</td>
 </tr>
 <tr>
-<td>attributes</td>
-<td>{}</td>
+<td>attributes <br><em>object</em></td>
 <td>The object that contains all the pertanent information about the order.</td>
 </tr>
 <tr>
-<td>vendor-po</td>
-<td>required (string / number)</td>
+<td>vendor-po <br><em>string / number</em></td>
 <td>Your PO number. This string/number must be unique with every order.</td>
 </tr>
 <tr>
-<td>shipping-method</td>
-<td>string</td>
+<td>shipping-method <br><em>string</em></td>
 <td>The shipping carrier and method for the order. For example, use USPSF for USPS First Class. See shipping methods.</td>
 </tr>
 <tr>
-<td>included</td>
-<td>[{}]</td>
+<td>included <br><em>array[objects]</em></td>
 <td>The array element describing the item(s) to be included in the order.</td>
 </tr>
 </tbody></table>
@@ -222,54 +215,44 @@
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>type</td>
-<td>line-items</td>
-<td>Resource the object represents.</td>
+<td>type <br><em>string</em></td>
+<td>Resource the object represents This should always be &ldquo;line-items&rdquo;.</td>
 </tr>
 <tr>
-<td>attributes</td>
-<td>{}</td>
+<td>attributes <br><em>object</em></td>
 <td>The object that contains all the pertanent information about the line-item resource.</td>
 </tr>
 <tr>
-<td>line-number</td>
-<td>number</td>
+<td>line-number <br><em>number</em></td>
 <td>Each line should have a line number in incrementing order. If omitted a line number will be automatically assigned.</td>
 </tr>
 <tr>
-<td>quantity</td>
-<td>number</td>
+<td>quantity <br><em>number</em></td>
 <td>The number of items you want to order for a given product.</td>
 </tr>
 <tr>
-<td>description</td>
-<td>string</td>
+<td>description <br><em>string</em></td>
 <td>You description of the item. If omitted the default product description will be used.</td>
 </tr>
 <tr>
-<td>specification-id</td>
-<td>number</td>
+<td>specification-id <br><em>number</em></td>
 <td>The products specification id of the item to order. See product codes here.</td>
 </tr>
 <tr>
-<td>item-properties</td>
-<td>{}</td>
+<td>item-properties <br><em>object (optional)</em></td>
 <td>Additional attributes for some products. This can be omitted in most cases. See products for more information.</td>
 </tr>
 <tr>
-<td>designs</td>
-<td>[{}]</td>
+<td>designs <br><em>array[objects]</em></td>
 <td>An array of objects describing information about the artwork to be printed.</td>
 </tr>
 <tr>
-<td>image_remote_url</td>
-<td>string</td>
+<td>image_remote_url <br><em>string</em></td>
 <td>A publically accessible path to the source artwork.</td>
 </tr>
 </tbody></table>
@@ -278,39 +261,32 @@
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type *</th>
-<th>Description</th>
+<th>Attribute*</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>type</td>
-<td>shipping-address</td>
-<td>Shipping address is required.</td>
+<td>type <br><em>string</em></td>
+<td>Shipping address is required. This will always be &ldquo;shipping-address&rdquo;.</td>
 </tr>
 <tr>
-<td>name</td>
-<td>string</td>
-<td>The name to reference the shipment details</td>
+<td>name <br><em>string</em></td>
+<td>The name to reference the shipment details.</td>
 </tr>
 <tr>
-<td>address</td>
-<td>string</td>
+<td>address <br><em>string</em></td>
 <td>The shipment street plus additional details (suite/apt./etc). Additional lines should be separated by a carriage return &ldquo;\n&rdquo;.</td>
 </tr>
 <tr>
-<td>city</td>
-<td>string</td>
+<td>city <br><em>string</em></td>
 <td>The city of the shipment.</td>
 </tr>
 <tr>
-<td>state</td>
-<td>string</td>
+<td>state <br><em>string</em></td>
 <td>Two digit ISO 3166-2 code of the destination state, ie &ldquo;US&rdquo;.</td>
 </tr>
 <tr>
-<td>postal-code</td>
-<td>string</td>
+<td>postal-code <br><em>string</em></td>
 <td>The postal code of the shipment.</td>
 </tr>
 </tbody></table>
@@ -323,25 +299,21 @@
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>type</td>
-<td>pack-list</td>
-<td>Resource the object represents.</td>
+<td>type <br><em>string</em></td>
+<td>Resource the object represents. This will always be &ldquo;pack-list&rdquo;.</td>
 </tr>
 <tr>
-<td>attributes</td>
-<td>{}</td>
+<td>attributes <br><em>object</em></td>
 <td>The object that contains all the pertanent information about the line-item resource.</td>
 </tr>
 <tr>
-<td>url</td>
-<td>string</td>
-<td>Publicly accessible path to image file (or PDF) for the order&rsquo;s packing list.</td>
+<td>url <br><em>string</em></td>
+<td>Http(s) accessible path to image file (or PDF) for the order&rsquo;s packing list.</td>
 </tr>
 </tbody></table>
 
@@ -349,25 +321,21 @@
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>type</td>
-<td>shipping-label</td>
-<td>Resource the object represents.</td>
+<td>type <br><em>string</em></td>
+<td>Resource the object represents. This will always be &ldquo;shipping-label&rdquo;.</td>
 </tr>
 <tr>
-<td>attributes</td>
-<td>{}</td>
+<td>attributes <br><em>object</em></td>
 <td>The object that contains all the pertanent information about the line-item resource.</td>
 </tr>
 <tr>
-<td>url</td>
-<td>string</td>
-<td>Publicly accessible path to image file (or PDF) for the order&rsquo;s shipping label.</td>
+<td>url <br><em>string</em></td>
+<td>Http(s) accessible path to image file (or PDF) for the order&rsquo;s shipping label.</td>
 </tr>
 </tbody></table>
 
@@ -485,15 +453,13 @@
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include</td>
-<td>none</td>
-<td>If set to line-items, the result will also include line-items.</td>
+<td>include <br><em>string (optional)</em></td>
+<td>If set to &ldquo;line-items&rdquo;, the result will also include line-items.</td>
 </tr>
 </tbody></table>
 

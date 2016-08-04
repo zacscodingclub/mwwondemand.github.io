@@ -102,90 +102,73 @@ Content-Type: application/vnd.api+json
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default / Type</th>
-<th>Description</th>
+<th>Attributes</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
-<td>data</td>
-<td>{}</td>
+<td>data <br><em>object</em></td>
 <td>The root element of your JSON post object.</td>
 </tr>
 <tr>
-<td>type</td>
-<td>webhooks</td>
-<td>Resource the object represents.</td>
+<td>type <br><em>string</em></td>
+<td>Resource the object represents. This will always be &ldquo;webhooks&rdquo;.</td>
 </tr>
 <tr>
 <td>attributes</td>
-<td>{}</td>
-<td>The object that contains all the pertanent information about the order.</td>
+<td>object</td>
 </tr>
 <tr>
-<td>attributes[url]</td>
-<td>nil</td>
-<td>String: the URL to receive callback notifications</td>
+<td>url <br><em>string</em></td>
+<td>The URL to receive callback notifications.</td>
 </tr>
 <tr>
-<td>attributes[enabled]</td>
-<td>true</td>
-<td>Boolean: Pause notifications by setting false</td>
+<td>enabled <br><em>boolean</em></td>
+<td>Pause notifications by setting false.</td>
 </tr>
 <tr>
-<td>attributes[received]</td>
-<td>true</td>
-<td>Boolean: Fired when order is received</td>
+<td>received <br><em>boolean</em></td>
+<td>Fired when order is received.</td>
 </tr>
 <tr>
-<td>attributes[design-downloaded]</td>
-<td>false</td>
-<td>Boolean: Fired after item design downloaded</td>
+<td>designdwnloaded<br><em>boolean</em></td>
+<td>Fired after item design downloaded.</td>
 </tr>
 <tr>
-<td>attributes[processed]</td>
-<td>true</td>
-<td>Boolean: Fired after processing complete for order/items</td>
+<td>processed <br><em>boolean</em></td>
+<td>Fired after processing complete for order/items.</td>
 </tr>
 <tr>
-<td>attributes[shipped]</td>
-<td>true</td>
-<td>Boolean: Fired when an order/item ships</td>
+<td>shipped <br><em>boolean</em></td>
+<td>Fired when an order/item ships.</td>
 </tr>
 <tr>
-<td>attributes[cancelled]</td>
-<td>true</td>
-<td>Boolean: Fired when an order/item is cancelled</td>
+<td>cancelled <br><em>boolean</em></td>
+<td>Fired when an order/item is cancelled.</td>
 </tr>
 <tr>
-<td>attributes[printed]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is printed</td>
+<td>printed <br><em>boolean</em></td>
+<td>Fired after an item is printed.</td>
 </tr>
 <tr>
-<td>attributes[pressed]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is pressed</td>
+<td>pressed <br><em>boolean</em></td>
+<td>Fired after an item is pressed.</td>
 </tr>
 <tr>
-<td>attributes[cut]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is cut</td>
+<td>cut <br><em>boolean</em></td>
+<td>Fired after an item is cut.</td>
 </tr>
 <tr>
-<td>attributes[sewn]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is sewn</td>
+<td>sewn <br><em>boolean</em></td>
+<td>Fired after an item is sewn.</td>
 </tr>
 <tr>
-<td>attributes[turned]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is turned</td>
+<td>turned <br><em>boolean</em></td>
+<td>Fired after an item is turned.</td>
 </tr>
 <tr>
-<td>attributes[packed]</td>
-<td>false</td>
-<td>Boolean: Fired after an item is packed</td>
+<td>packed <br><em>boolean</em></td>
+<td>Fired after an item is packed.</td>
 </tr>
 </tbody></table>
 
