@@ -32,8 +32,16 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 
 <p><code class="prettyprint">Authorization: auth-key=YOUR_API_KEY</code></p>
 
+<p><code class="prettyprint">Content-Type: application/vnd.api+json</code></p>
+
+<p><code class="prettyprint">Accept: application/vnd.api+json; version=1</code></p>
+
 <aside class="notice">
 You must replace <code>YOUR_API_KEY</code> with your personal API key.
+</aside>
+
+<aside class="warning">
+You must include the Content-Type and Accept headers in every request.
 </aside>
 
 <h2 id="regenerate-your-api-key">Regenerate Your API Key</h2>
