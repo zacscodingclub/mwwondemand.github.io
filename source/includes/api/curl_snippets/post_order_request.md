@@ -51,14 +51,11 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "specification-id": "1720",
         "po": 312,
         "item-properties": {
-          "thread-color": "white",
-          "blah": "blah-2"
+          "thread-color": "white"
         },
         "designs": [
           {
-            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg",
-            "position": "centered",
-            "crop": "left"
+            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
           }
         ]
       }
@@ -72,8 +69,7 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "specification-id": "1720",
         "po": 312,
         "item-properties": {
-          "thread-color": "white",
-          "blah": "blah-2"
+          "thread-color": "white"
         },
         "designs": [
           {
