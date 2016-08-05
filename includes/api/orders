@@ -52,7 +52,6 @@
         <span class="s2">"quantity"</span>: 2,
         <span class="s2">"description"</span>: <span class="s2">"It</span><span class="se">\'</span><span class="s2">s not sò fluffy!"</span>,
         <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
-        <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
           <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>
         <span class="o">}</span>,
@@ -70,7 +69,6 @@
         <span class="s2">"quantity"</span>: 5,
         <span class="s2">"description"</span>: <span class="s2">"Velour Vest"</span>,
         <span class="s2">"specification-id"</span>: <span class="s2">"1720"</span>,
-        <span class="s2">"po"</span>: 312,
         <span class="s2">"item-properties"</span>: <span class="o">{</span>
           <span class="s2">"thread-color"</span>: <span class="s2">"white"</span>
         <span class="o">}</span>,
@@ -241,7 +239,7 @@
 </tr>
 <tr>
 <td>specification-id <br><em>number</em></td>
-<td>The products specification id of the item to order. See product codes here.</td>
+<td>The products specification id of the item to order. See product codes <a href="#products">here</a>.</td>
 </tr>
 <tr>
 <td>item-properties <br><em>object (optional)</em></td>
