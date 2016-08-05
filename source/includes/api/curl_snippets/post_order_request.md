@@ -49,7 +49,6 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "quantity": 2,
         "description": "It\'s not sò fluffy!",
         "specification-id": "1720",
-        "po": 312,
         "item-properties": {
           "thread-color": "white"
         },
@@ -67,7 +66,6 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "quantity": 5,
         "description": "Velour Vest",
         "specification-id": "1720",
-        "po": 312,
         "item-properties": {
           "thread-color": "white"
         },
