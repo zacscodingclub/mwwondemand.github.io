@@ -48,7 +48,7 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "line-number": 1,
         "quantity": 2,
         "description": "It\'s not sò fluffy!",
-        "specification-id": "1720",
+        "product-code": "PRT-GEN-ZOH99",
         "item-properties": {
           "thread-color": "white"
         },
@@ -65,7 +65,7 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         "line-number": 2,
         "quantity": 5,
         "description": "Velour Vest",
-        "specification-id": "1720",
+        "product-code": "PRT-GEN-XOH99",
         "item-properties": {
           "thread-color": "white"
         },
