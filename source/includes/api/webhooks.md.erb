@@ -1,6 +1,6 @@
 # Web Hooks
 
-A customer can provide a single URL to be called with a notifications when various events occur related to his/her orders. Also customers may opt-in/out to various order/order item events that fire notifications.
+A customer can provide a single URL to be called with a notifications when various events occur related to his/her orders. Also customers may opt-in/out to various order/order item events that fire notifications. This is an experimental feature and subject to change. For production applications we highly recommend querying for status via the order end point.
 
 
 ## Create a Web Hook
@@ -35,7 +35,7 @@ attributes | object | The object that contains all the pertanent information abo
 url <br><em>string</em> | The URL to receive callback notifications.
 enabled <br><em>boolean</em> | Pause notifications by setting false.
 received <br><em>boolean</em> | Fired when order is received.
-designdwnloaded<br><em>boolean</em> | Fired after item design downloaded.
+designdownloaded<br><em>boolean</em> | Fired after item design downloaded.
 processed <br><em>boolean</em> | Fired after processing complete for order/items.
 shipped <br><em>boolean</em> | Fired when an order/item ships.
 cancelled <br><em>boolean</em> | Fired when an order/item is cancelled.
