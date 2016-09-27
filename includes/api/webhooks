@@ -1,6 +1,6 @@
 <h1 id="web-hooks">Web Hooks</h1>
 
-<p>A customer can provide a single URL to be called with a notifications when various events occur related to his/her orders. Also customers may opt-in/out to various order/order item events that fire notifications.</p>
+<p>A customer can provide a single URL to be called with a notifications when various events occur related to his/her orders. Also customers may opt-in/out to various order/order item events that fire notifications. This is an experimental feature and subject to change. For production applications we highly recommend querying for status via the order end point.</p>
 
 <h2 id="create-a-web-hook">Create a Web Hook</h2>
 
@@ -131,7 +131,7 @@ Content-Type: application/vnd.api+json
 <td>Fired when order is received.</td>
 </tr>
 <tr>
-<td>designdwnloaded<br><em>boolean</em></td>
+<td>designdownloaded<br><em>boolean</em></td>
 <td>Fired after item design downloaded.</td>
 </tr>
 <tr>
