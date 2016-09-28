@@ -19,16 +19,9 @@ Cache-Control: max-age=0, private, must-revalidate
       "url": "https://your-server.com/order-notifications",
       "enabled": true,
       "received": true,
-      "design-downloaded": false,
-      "processed": true,
-      "shipped": true,
-      "cancelled": true,
       "printed": false,
-      "pressed": false,
-      "cut": false,
-      "sewn": false,
-      "turned": false,
-      "packed": false
+      "shipped": true,
+      "cancelled": true
     },
     "relationships": {
       "user": {

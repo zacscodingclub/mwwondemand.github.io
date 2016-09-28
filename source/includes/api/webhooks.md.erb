@@ -1,7 +1,13 @@
 # Web Hooks
 
-A customer can provide a single URL to be called with a notifications when various events occur related to his/her orders. Also customers may opt-in/out to various order/order item events that fire notifications.
+A customer can provide a single URL to be called with a notifications when
+various events occur related to his/her orders. Also customers may opt-in/out
+to various order events that trigger notifications. Order events which a
+customer may choose to receive notifications for are: `received`, `printed`, 
+`shipped`, and `cancelled`.
 
+This is a beta feature of the API, so consider Web hook notifications
+as experimental behavior.
 
 ## Create a Web Hook
 
@@ -34,20 +40,15 @@ type <br><em>string</em> | Resource the object represents. This will always be "
 attributes | object | The object that contains all the pertanent information about the order.
 url <br><em>string</em> | The URL to receive callback notifications.
 enabled <br><em>boolean</em> | Pause notifications by setting false.
-received <br><em>boolean</em> | Fired when order is received.
-designdwnloaded<br><em>boolean</em> | Fired after item design downloaded.
-processed <br><em>boolean</em> | Fired after processing complete for order/items.
-shipped <br><em>boolean</em> | Fired when an order/item ships.
-cancelled <br><em>boolean</em> | Fired when an order/item is cancelled.
-printed <br><em>boolean</em> | Fired after an item is printed.
-pressed <br><em>boolean</em> | Fired after an item is pressed.
-cut <br><em>boolean</em> | Fired after an item is cut.
-sewn <br><em>boolean</em> | Fired after an item is sewn.
-turned <br><em>boolean</em> | Fired after an item is turned.
-packed <br><em>boolean</em> | Fired after an item is packed.
+received <br><em>boolean</em> | Fired when an order is received.
+printed <br><em>boolean</em> | Fired after all items in an order are printed.
+shipped <br><em>boolean</em> | Fired when all items in an order are shipped.
+cancelled <br><em>boolean</em> | Fired when an entire order is cancelled.
 
 *Note: This endpoint follows the [JSON API 1.0 Spec](http://jsonapi.org/format/1.0/)*
 
+In the future there may be support for line item event notifications such as:
+`pressed`, `cut`, `sewn`, `turned`, `packed`, or `shipped`.
 
 ### Errors
 
@@ -120,14 +121,12 @@ edit your Web Hooks (opt-in) preferences.
 - The `enabled` checkbox must be `checked` in order to receive POST notifications.
 - Check the various events that you would like to receive notifications for.
 
-Events for Orders | Events for Items
------------------ | ----------------
-Received | Printed
-Design Downloaded | Pressed
-Not Valid | Cut
-Processed | Sewn
-Shipped | Turned
-Cancelled | Packed
+|Events for Orders|
+|-----------------|
+|Received|
+|Printed|
+|Shipped|
+|Cancelled|
 
 To the right is an example JSON payload for a POST notification sent after an
 order is received.
