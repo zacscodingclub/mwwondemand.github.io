@@ -17,11 +17,9 @@ Cache-Control: max-age=0, private, must-revalidate
       "created-at": "2016-04-09T22:38:50.426Z",
       "updated-at": "2016-04-09T22:38:50.426Z",
       "url": "https://your-server.com/order-notifications",
-      "enabled": true,
-      "received": true,
-      "printed": false,
-      "shipped": true,
-      "cancelled": true
+      "enabled": false,
+      "received": false,
+      "shipped": false
     },
     "relationships": {
       "user": {
