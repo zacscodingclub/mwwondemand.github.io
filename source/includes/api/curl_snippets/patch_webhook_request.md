@@ -6,12 +6,8 @@ curl -X PATCH https://api.mwwondemand.com/api/webhooks/503678086298993748 \
       "type": "webhooks",
       "attributes": {
         "url": "https://your-server.com/mwwondemand-order-notifications",
-        "printed": true,
-        "pressed": true,
-        "cut": true,
-        "sewn": true,
-        "turned": true,
-        "packed": true
+        "enabled": true,
+        "shipped": true
       }
     }
   }' \

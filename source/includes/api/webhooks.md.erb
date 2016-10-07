@@ -3,8 +3,7 @@
 A customer can provide a single URL to be called with a notifications when
 various events occur related to his/her orders. Also customers may opt-in/out
 to various order events that trigger notifications. Order events which a
-customer may choose to receive notifications for are: `received`, `printed`, 
-`shipped`, and `cancelled`.
+customer may choose to receive notifications for are `received` and `shipped`. 
 
 This is a beta feature of the API, so consider Web hook notifications
 as experimental behavior.
@@ -41,14 +40,12 @@ attributes | object | The object that contains all the pertanent information abo
 url <br><em>string</em> | The URL to receive callback notifications.
 enabled <br><em>boolean</em> | Pause notifications by setting false.
 received <br><em>boolean</em> | Fired when an order is received.
-printed <br><em>boolean</em> | Fired after all items in an order are printed.
 shipped <br><em>boolean</em> | Fired when all items in an order are shipped.
-cancelled <br><em>boolean</em> | Fired when an entire order is cancelled.
 
 *Note: This endpoint follows the [JSON API 1.0 Spec](http://jsonapi.org/format/1.0/)*
 
 In the future there may be support for line item event notifications such as:
-`pressed`, `cut`, `sewn`, `turned`, `packed`, or `shipped`.
+`printed`, `pressed`, `cut`, `sewn`, `turned`, `packed`, `cancelled`, or `shipped`.
 
 ### Errors
 
@@ -124,9 +121,7 @@ edit your Web Hooks (opt-in) preferences.
 |Events for Orders|
 |-----------------|
 |Received|
-|Printed|
 |Shipped|
-|Cancelled|
 
 To the right is an example JSON payload for a POST notification sent after an
 order is received.
