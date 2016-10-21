@@ -54,7 +54,7 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         },
         "designs": [
           {
-            "image_remote_url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
+            "image-remote-url": "http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"
           }
         ]
       }
@@ -71,7 +71,7 @@ curl -X "POST" "http://api.mwwondemand.com/api/orders" \
         },
         "designs": [
           {
-            "image_remote_url": "http://images.apple.com/v/home/cj/images/heros/iphone-6s-change_xlarge.jpg"
+            "image-remote-url": "http://images.apple.com/v/home/cj/images/heros/iphone-6s-change_xlarge.jpg"
           }
         ]
       }
