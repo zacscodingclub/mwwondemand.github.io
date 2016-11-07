@@ -18,17 +18,8 @@ Cache-Control: max-age=0, private, must-revalidate
       "updated-at": "2016-04-09T23:35:18.364Z",
       "url": "https://your-server.com/mwwondemand-order-notifications",
       "enabled": true,
-      "received": true,
-      "design-downloaded": false,
-      "processed": true,
-      "shipped": true,
-      "cancelled": true,
-      "printed": true,
-      "pressed": true,
-      "cut": true,
-      "sewn": true,
-      "turned": true,
-      "packed": true
+      "received": false,
+      "shipped": true
     },
     "relationships": {
       "user": {
