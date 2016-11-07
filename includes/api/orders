@@ -57,7 +57,7 @@
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
-            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>
+            <span class="s2">"image-remote-url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/promos/ipad_pro_large.jpg"</span>
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
@@ -74,7 +74,7 @@
         <span class="o">}</span>,
         <span class="s2">"designs"</span>: <span class="o">[</span>
           <span class="o">{</span>
-            <span class="s2">"image_remote_url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/heros/iphone-6s-change_xlarge.jpg"</span>
+            <span class="s2">"image-remote-url"</span>: <span class="s2">"http://images.apple.com/v/home/cj/images/heros/iphone-6s-change_xlarge.jpg"</span>
           <span class="o">}</span>
         <span class="o">]</span>
       <span class="o">}</span>
@@ -250,7 +250,7 @@
 <td>An array of objects describing information about the artwork to be printed.</td>
 </tr>
 <tr>
-<td>image_remote_url <br><em>string</em></td>
+<td>image-remote-url <br><em>string</em></td>
 <td>A publically accessible path to the source artwork.</td>
 </tr>
 </tbody></table>

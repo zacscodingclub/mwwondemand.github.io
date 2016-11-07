@@ -5,12 +5,8 @@
       "type": "webhooks",
       "attributes": {
         "url": "https://your-server.com/mwwondemand-order-notifications",
-        "printed": true,
-        "pressed": true,
-        "cut": true,
-        "sewn": true,
-        "turned": true,
-        "packed": true
+        "enabled": true,
+        "shipped": true
       }
     }
   }'</span> <span class="se">\</span>
