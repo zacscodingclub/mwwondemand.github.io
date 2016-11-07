@@ -15,13 +15,6 @@
         "state": "received",
         "product-code": "3PF-PJT-SLPG4CW",
         "line-number": 2,
-        "design-urls": [
-          {
-            "original": "/images/original/missing.png",
-            "thumb": "/images/thumb/missing.png",
-            "medium": "/images/medium/missing.png"
-          }
-        ],
         "po": "6477724553765206641477418918.0488908",
         "line-item-count": {
           "line_item_id": 647372455787562562,
@@ -87,13 +80,6 @@
         "state": "received",
         "product-code": "3PF-PSY-SQPGZ2C",
         "line-number": 1,
-        "design-urls": [
-          {
-            "original": "/images/original/missing.png",
-            "thumb": "/images/thumb/missing.png",
-            "medium": "/images/medium/missing.png"
-          }
-        ],
         "po": "6477724553765206641477418918.02306",
         "line-item-count": {
           "line_item_id": 647772455569458650,
