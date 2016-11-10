@@ -8,7 +8,7 @@
 
 <h3 id="https-request">HTTPS Request</h3>
 
-<p><code class="prettyprint">GET https://api.mwwondemand.com/api/orders/&lt;MWW_ORDER_ID&gt;/line_items</code></p>
+<p><code class="prettyprint">GET https://api.mwwondemand.com/api/orders/&lt;MWW_ORDER_ID&gt;/line-items</code></p>
 
 <p>This endpoint includes line item details for all items in an order, status info,
 and for items that are shipped - tracking numbers are available.</p>
