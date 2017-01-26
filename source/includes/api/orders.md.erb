@@ -124,14 +124,12 @@ Remember — a successful request will be an authenticated request!
 
 ```ruby
 require 'mww'
-
 api = Mww::APIClient.authorize!('meowmeowmeow')
 api.orders.get(2)
 ```
 
 ```python
 import kittn
-
 api = kittn.authorize('meowmeowmeow')
 api.orders.get(2)
 ```
@@ -140,10 +138,10 @@ This endpoint retrieves a specific order.
 
 ### HTTPS Request
 
-`GET https://api.mwwondemand.com/api/orders/<MWW_ORDER_ID>`
+`GET https://api.mwwondemand.com/orders/<MWW_ORDER_ID>`
 ### _or_
 
-`GET https://api.mwwondemand.com/api/orders/<YOUR_VENDOR_PO>`
+`GET https://api.mwwondemand.com/orders/<YOUR_VENDOR_PO>`
 
 ### URL Parameters
 
