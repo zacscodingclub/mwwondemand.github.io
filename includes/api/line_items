@@ -178,12 +178,6 @@ numbers for tracking the shipment(s).</p>
 for items that are shipped - tracking numbers are available. See the
 <code class="prettyprint">tracking-numbers</code> attribute for available shipment(s).</p>
 
-<pre class="highlight shell"><code>curl -X <span class="s2">"GET"</span> <span class="s2">"https://api.mwwondemand.com/api/line-items/647372455787562562"</span> <span class="se">\</span>
-  -H <span class="s2">"Accept: application/vnd.api+json;version=1"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: auth-key=YOUR_API_KEY"</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/vnd.api+json"</span>
-</code></pre>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
