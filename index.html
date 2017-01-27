@@ -1284,7 +1284,31 @@ order is received.</p>
 
           <h1 id="errors">Errors</h1>
 
-<p>The MWW API uses the following error codes:</p>
+<p>The MWW API relies on the following error conditions:</p>
+
+<h2 id="unauthorizederror">UnauthorizedError</h2>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>401</td>
+<td>UNAUTHORIZED</td>
+</tr>
+</tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&lsquo;Authorized Users Only&rsquo;</p>
+
+<p><strong>Description</strong></p>
+
+<p>The requestor is unauthorized to act on the requested resource.</p>
+
+<h2 id="productcodeerror">ProductCodeError</h2>
 
 <table><thead>
 <tr>
@@ -1296,119 +1320,126 @@ order is received.</p>
 <td>100</td>
 <td>VALIDATION_ERROR</td>
 </tr>
+</tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&#39;Product code not valid.&rsquo;</p>
+
+<p><strong>Description</strong></p>
+
+<p>The product code is incorrect, see the line number indicated in your order.</p>
+
+<h2 id="updateshippingaddresserror">UpdateShippingAddressError</h2>
+
+<table><thead>
 <tr>
-<td>101</td>
-<td>INVALID_RESOURCE</td>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>102</td>
-<td>FILTER_NOT_ALLOWED</td>
+<td>422</td>
+<td>UNPROCESSABLE_ENTITY</td>
 </tr>
+</tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&#39;Cannot update shipping address&rsquo;</p>
+
+<p><strong>Description</strong> </p>
+
+<p>The order has already shipped. It is no longer possible to change the shipping address for this order.</p>
+
+<p><strong>Notes</strong> </p>
+
+<p>&#39;The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.&rsquo;</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4918#section-11.2">https://tools.ietf.org/html/rfc4918#section-11.2</a></p>
+
+<h2 id="missingshippingaddresserror">MissingShippingAddressError</h2>
+
+<table><thead>
 <tr>
-<td>103</td>
-<td>INVALID_FIELD_VALUE</td>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>104</td>
-<td>INVALID_FIELD</td>
+<td>422</td>
+<td>UNPROCESSABLE_ENTITY</td>
 </tr>
+</tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&#39;Shipping address is required&rsquo;</p>
+
+<p><strong>Description</strong> </p>
+
+<p>The order is missing a shipping address. A shipping request is required to submit an order.</p>
+
+<p><strong>Notes</strong> </p>
+
+<p>&#39;The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.&rsquo;</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4918#section-11.2">https://tools.ietf.org/html/rfc4918#section-11.2</a></p>
+
+<h2 id="invalidorderformaterror">InvalidOrderFormatError</h2>
+
+<table><thead>
 <tr>
-<td>105</td>
-<td>PARAM_NOT_ALLOWED</td>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
+</thead><tbody>
 <tr>
-<td>106</td>
-<td>PARAM_MISSING</td>
+<td>422</td>
+<td>UNPROCESSABLE_ENTITY</td>
 </tr>
+</tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&#39;Invalid Order Format&rsquo;</p>
+
+<p><strong>Description</strong> </p>
+
+<p>Please ensure that the item designs are an array</p>
+
+<p><strong>Notes</strong> </p>
+
+<p>&#39;The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.&rsquo;</p>
+
+<p><a href="https://tools.ietf.org/html/rfc4918#section-11.2">https://tools.ietf.org/html/rfc4918#section-11.2</a></p>
+
+<h2 id="internalservererror">InternalServerError</h2>
+
+<table><thead>
 <tr>
-<td>107</td>
-<td>INVALID_FILTER_VALUE</td>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
-<tr>
-<td>108</td>
-<td>COUNT_MISMATCH</td>
-</tr>
-<tr>
-<td>109</td>
-<td>KEY_ORDER_MISMATCH</td>
-</tr>
-<tr>
-<td>110</td>
-<td>KEY_NOT_INCLUDED_IN_URL</td>
-</tr>
-<tr>
-<td>112</td>
-<td>INVALID_INCLUDE</td>
-</tr>
-<tr>
-<td>113</td>
-<td>RELATION_EXISTS</td>
-</tr>
-<tr>
-<td>114</td>
-<td>INVALID_SORT_CRITERIA</td>
-</tr>
-<tr>
-<td>115</td>
-<td>INVALID_LINKS_OBJECT</td>
-</tr>
-<tr>
-<td>116</td>
-<td>TYPE_MISMATCH</td>
-</tr>
-<tr>
-<td>117</td>
-<td>INVALID_PAGE_OBJECT</td>
-</tr>
-<tr>
-<td>118</td>
-<td>INVALID_PAGE_VALUE</td>
-</tr>
-<tr>
-<td>119</td>
-<td>INVALID_FIELD_FORMAT</td>
-</tr>
-<tr>
-<td>120</td>
-<td>INVALID_FILTERS_SYNTAX</td>
-</tr>
-<tr>
-<td>121</td>
-<td>SAVE_FAILED</td>
-</tr>
-<tr>
-<td>122</td>
-<td>INVALID_DATA_FORMAT</td>
-</tr>
-<tr>
-<td>401</td>
-<td>UNAUTHORIZED</td>
-</tr>
-<tr>
-<td>403</td>
-<td>FORBIDDEN</td>
-</tr>
-<tr>
-<td>404</td>
-<td>NOT_FOUND</td>
-</tr>
-<tr>
-<td>406</td>
-<td>NOT_ACCEPTABLE</td>
-</tr>
-<tr>
-<td>415</td>
-<td>UNSUPPORTED_MEDIA_TYPE</td>
-</tr>
-<tr>
-<td>423</td>
-<td>LOCKED</td>
-</tr>
+</thead><tbody>
 <tr>
 <td>500</td>
 <td>INTERNAL_SERVER_ERROR</td>
 </tr>
 </tbody></table>
+
+<p><strong>Title</strong></p>
+
+<p>&#39;Internal Server Error&rsquo;</p>
+
+<p><strong>Description</strong></p>
+
+<p>This is a standard HTTP error</p>
+
+<p><strong>Notes</strong>
+&#39;The server encountered an unexpected condition which prevented it from fulfilling the request.&rsquo;</p>
+
+<p><a href="https://tools.ietf.org/html/rfc2616#section-10.5.1">https://tools.ietf.org/html/rfc2616#section-10.5.1</a></p>
 
           <h1 id="credits">Credits</h1>
 
