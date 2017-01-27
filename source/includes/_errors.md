@@ -1,21 +1,35 @@
 # Errors
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-The Kittn API uses the following error codes:
-
+The MWW API uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------
-400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
-406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-422 | Your response contained invalid data. Check the response body for details.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
+100 | VALIDATION_ERROR
+101 | INVALID_RESOURCE
+102 | FILTER_NOT_ALLOWED
+103 | INVALID_FIELD_VALUE
+104 | INVALID_FIELD
+105 | PARAM_NOT_ALLOWED
+106 | PARAM_MISSING
+107 | INVALID_FILTER_VALUE
+108 | COUNT_MISMATCH
+109 | KEY_ORDER_MISMATCH
+110 | KEY_NOT_INCLUDED_IN_URL
+112 | INVALID_INCLUDE
+113 | RELATION_EXISTS
+114 | INVALID_SORT_CRITERIA
+115 | INVALID_LINKS_OBJECT
+116 | TYPE_MISMATCH
+117 | INVALID_PAGE_OBJECT
+118 | INVALID_PAGE_VALUE
+119 | INVALID_FIELD_FORMAT
+120 | INVALID_FILTERS_SYNTAX
+121 | SAVE_FAILED
+122 | INVALID_DATA_FORMAT
+401 | UNAUTHORIZED
+403 | FORBIDDEN
+404 | NOT_FOUND
+406 | NOT_ACCEPTABLE
+415 | UNSUPPORTED_MEDIA_TYPE
+423 | LOCKED
+500 | INTERNAL_SERVER_ERROR
