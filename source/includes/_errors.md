@@ -1,35 +1,109 @@
 # Errors
 
-The MWW API uses the following error codes:
+The MWW API relies on the following error conditions:
 
+## UnauthorizedError
+Error Code | Meaning
+---------- | -------
+401 | UNAUTHORIZED
+
+**Title**
+
+'Authorized Users Only'
+
+**Description**
+
+The requestor is unauthorized to act on the requested resource.
+
+
+## ProductCodeError
 Error Code | Meaning
 ---------- | -------
 100 | VALIDATION_ERROR
-101 | INVALID_RESOURCE
-102 | FILTER_NOT_ALLOWED
-103 | INVALID_FIELD_VALUE
-104 | INVALID_FIELD
-105 | PARAM_NOT_ALLOWED
-106 | PARAM_MISSING
-107 | INVALID_FILTER_VALUE
-108 | COUNT_MISMATCH
-109 | KEY_ORDER_MISMATCH
-110 | KEY_NOT_INCLUDED_IN_URL
-112 | INVALID_INCLUDE
-113 | RELATION_EXISTS
-114 | INVALID_SORT_CRITERIA
-115 | INVALID_LINKS_OBJECT
-116 | TYPE_MISMATCH
-117 | INVALID_PAGE_OBJECT
-118 | INVALID_PAGE_VALUE
-119 | INVALID_FIELD_FORMAT
-120 | INVALID_FILTERS_SYNTAX
-121 | SAVE_FAILED
-122 | INVALID_DATA_FORMAT
-401 | UNAUTHORIZED
-403 | FORBIDDEN
-404 | NOT_FOUND
-406 | NOT_ACCEPTABLE
-415 | UNSUPPORTED_MEDIA_TYPE
-423 | LOCKED
+
+**Title**
+
+'Product code not valid.'
+
+**Description**
+
+The product code is incorrect, see the line number indicated in your order.
+
+
+## UpdateShippingAddressError
+Error Code | Meaning
+---------- | -------
+422 | UNPROCESSABLE_ENTITY
+
+**Title**
+
+'Cannot update shipping address'
+
+**Description** 
+
+The order has already shipped. It is no longer possible to change the shipping address for this order.
+
+**Notes** 
+
+'The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.'
+
+[https://tools.ietf.org/html/rfc4918#section-11.2](https://tools.ietf.org/html/rfc4918#section-11.2)
+
+
+## MissingShippingAddressError
+Error Code | Meaning
+---------- | -------
+422 | UNPROCESSABLE_ENTITY
+
+**Title**
+
+'Shipping address is required'
+
+**Description** 
+
+The order is missing a shipping address. A shipping request is required to submit an order.
+
+**Notes** 
+
+'The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.'
+
+[https://tools.ietf.org/html/rfc4918#section-11.2](https://tools.ietf.org/html/rfc4918#section-11.2)
+
+
+## InvalidOrderFormatError
+Error Code | Meaning
+---------- | -------
+422 | UNPROCESSABLE_ENTITY
+
+**Title**
+
+'Invalid Order Format'
+
+**Description** 
+
+Please ensure that the item designs are an array
+
+**Notes** 
+
+'The 422 (Unprocessable Entity) status code means the server understands the content type of the request entity, and the syntax of the request entity is correct (thus a 400 (Bad Request) status code is inappropriate) but was unable to process the contained instructions.'
+
+[https://tools.ietf.org/html/rfc4918#section-11.2](https://tools.ietf.org/html/rfc4918#section-11.2)
+
+
+## InternalServerError
+Error Code | Meaning
+---------- | -------
 500 | INTERNAL_SERVER_ERROR
+
+**Title**
+
+'Internal Server Error'
+
+**Description**
+
+This is a standard HTTP error
+
+**Notes**
+'The server encountered an unexpected condition which prevented it from fulfilling the request.'
+
+[https://tools.ietf.org/html/rfc2616#section-10.5.1](https://tools.ietf.org/html/rfc2616#section-10.5.1)
