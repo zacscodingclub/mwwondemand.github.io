@@ -1284,9 +1284,7 @@ order is received.</p>
 
           <h1 id="errors">Errors</h1>
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>The MWW API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -1295,52 +1293,120 @@ order is received.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
+<td>100</td>
+<td>VALIDATION_ERROR</td>
+</tr>
+<tr>
+<td>101</td>
+<td>INVALID_RESOURCE</td>
+</tr>
+<tr>
+<td>102</td>
+<td>FILTER_NOT_ALLOWED</td>
+</tr>
+<tr>
+<td>103</td>
+<td>INVALID_FIELD_VALUE</td>
+</tr>
+<tr>
+<td>104</td>
+<td>INVALID_FIELD</td>
+</tr>
+<tr>
+<td>105</td>
+<td>PARAM_NOT_ALLOWED</td>
+</tr>
+<tr>
+<td>106</td>
+<td>PARAM_MISSING</td>
+</tr>
+<tr>
+<td>107</td>
+<td>INVALID_FILTER_VALUE</td>
+</tr>
+<tr>
+<td>108</td>
+<td>COUNT_MISMATCH</td>
+</tr>
+<tr>
+<td>109</td>
+<td>KEY_ORDER_MISMATCH</td>
+</tr>
+<tr>
+<td>110</td>
+<td>KEY_NOT_INCLUDED_IN_URL</td>
+</tr>
+<tr>
+<td>112</td>
+<td>INVALID_INCLUDE</td>
+</tr>
+<tr>
+<td>113</td>
+<td>RELATION_EXISTS</td>
+</tr>
+<tr>
+<td>114</td>
+<td>INVALID_SORT_CRITERIA</td>
+</tr>
+<tr>
+<td>115</td>
+<td>INVALID_LINKS_OBJECT</td>
+</tr>
+<tr>
+<td>116</td>
+<td>TYPE_MISMATCH</td>
+</tr>
+<tr>
+<td>117</td>
+<td>INVALID_PAGE_OBJECT</td>
+</tr>
+<tr>
+<td>118</td>
+<td>INVALID_PAGE_VALUE</td>
+</tr>
+<tr>
+<td>119</td>
+<td>INVALID_FIELD_FORMAT</td>
+</tr>
+<tr>
+<td>120</td>
+<td>INVALID_FILTERS_SYNTAX</td>
+</tr>
+<tr>
+<td>121</td>
+<td>SAVE_FAILED</td>
+</tr>
+<tr>
+<td>122</td>
+<td>INVALID_DATA_FORMAT</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
+<td>UNAUTHORIZED</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+<td>FORBIDDEN</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+<td>NOT_FOUND</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+<td>NOT_ACCEPTABLE</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers.</td>
+<td>415</td>
+<td>UNSUPPORTED_MEDIA_TYPE</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&rsquo;m a teapot.</td>
-</tr>
-<tr>
-<td>422</td>
-<td>Your response contained invalid data. Check the response body for details.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
+<td>423</td>
+<td>LOCKED</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td>INTERNAL_SERVER_ERROR</td>
 </tr>
 </tbody></table>
 
