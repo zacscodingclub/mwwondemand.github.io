@@ -135,7 +135,7 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 </code></pre>
 
 <blockquote>
-<p>Make sure to replace <code class="prettyprint">YOUR_API_KEY</code> with your API key.</p>
+<p>Be sure to replace <code class="prettyprint">YOUR_API_KEY</code> with your API key.</p>
 </blockquote>
 
 <p>Access to the API uses an API key for authentication. You can register a new API key at <a href="https://api.mwwondemand.com/account/">https://api.mwwondemand.com/account/</a>.</p>
@@ -151,7 +151,7 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 <p><code class="prettyprint">Accept: application/vnd.api+json; version=1</code></p>
 
 <aside class="notice">
-You must replace <code>YOUR_API_KEY</code> with your personal API key.
+In the example code above, you must replace <code>YOUR_API_KEY</code> with your personal API key.
 </aside>
 
 <aside class="warning">
@@ -170,7 +170,7 @@ You must include the Content-Type and Accept headers in every request.
 </code></pre>
 
 <blockquote>
-<p>Make sure to replace <code class="prettyprint">YOUR_EXISTING_API_KEY</code> with your existing API key.
+<p>Be sure to replace <code class="prettyprint">YOUR_EXISTING_API_KEY</code> with your existing API key.
 The above command returns a response like:</p>
 </blockquote>
 <pre class="highlight plaintext"><code>HTTP/1.1 200 OK
