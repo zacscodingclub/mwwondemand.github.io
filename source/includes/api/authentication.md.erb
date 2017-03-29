@@ -2,7 +2,7 @@
 
 Customers are granted a API Key that can be used to authorize requests to the application server at <https://api.mwwondemand.com>
 
-Alternatively a token can be used by making a login request.
+<!-- Alternatively a token can be used by making a login request. -->
 
 
 ## API Key
@@ -145,6 +145,10 @@ if(!$resp) {
 
 > Be sure to replace `YOUR_API_KEY` with your API key.
 
+If you need and API key please contact your MWW representative.
+
+<%#
+
 Access to the API uses an API key for authentication. You can register a new API key at <https://api.mwwondemand.com/account/>.
 
 After you register, you can view your API key at <https://api.mwwondemand.com/account/user/api-key>.
@@ -164,6 +168,8 @@ In the example code above, you must replace <code>YOUR_API_KEY</code> with your 
 <aside class="warning">
 You must include the Content-Type and Accept headers in every request.
 </aside>
+
+%>
 
 ## Regenerate Your API Key
 
@@ -197,9 +203,15 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
+For any issues with regenerating an API key please contact your MWW representative.
+
+<%#
+
 To change your API key make a PATCH request using the `api/regenerate-api-key` endpoint.
 
 - Requires your existing API Key in the `Authorization` Header
 - Response Header and body include your newly generated `api-key`
 
 Also, you can regenerate the key at <https://api.mwwondemand.com/account/user/api-key>.
+
+%>
