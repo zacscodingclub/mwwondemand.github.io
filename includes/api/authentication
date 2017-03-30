@@ -2,7 +2,7 @@
 
 <p>Customers are granted a API Key that can be used to authorize requests to the application server at <a href="https://api.mwwondemand.com">https://api.mwwondemand.com</a></p>
 
-<p>Alternatively a token can be used by making a login request.</p>
+<!-- Alternatively a token can be used by making a login request. -->
 
 <h2 id="api-key">API Key</h2>
 
@@ -138,25 +138,7 @@ curl -X GET https://api.mwwondemand.com/api/endpoint <span class="se">\</span>
 <p>Be sure to replace <code class="prettyprint">YOUR_API_KEY</code> with your API key.</p>
 </blockquote>
 
-<p>Access to the API uses an API key for authentication. You can register a new API key at <a href="https://api.mwwondemand.com/account/">https://api.mwwondemand.com/account/</a>.</p>
-
-<p>After you register, you can view your API key at <a href="https://api.mwwondemand.com/account/user/api-key">https://api.mwwondemand.com/account/user/api-key</a>.</p>
-
-<p>The API expects an API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: auth-key=YOUR_API_KEY</code></p>
-
-<p><code class="prettyprint">Content-Type: application/vnd.api+json</code></p>
-
-<p><code class="prettyprint">Accept: application/vnd.api+json; version=1</code></p>
-
-<aside class="notice">
-In the example code above, you must replace <code>YOUR_API_KEY</code> with your personal API key.
-</aside>
-
-<aside class="warning">
-You must include the Content-Type and Accept headers in every request.
-</aside>
+<p>If you need and API key please contact your MWW representative.</p>
 
 <h2 id="regenerate-your-api-key">Regenerate Your API Key</h2>
 
@@ -188,11 +170,4 @@ Content-Type: application/json; charset=utf-8
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>To change your API key make a PATCH request using the <code class="prettyprint">api/regenerate-api-key</code> endpoint.</p>
-
-<ul>
-<li>Requires your existing API Key in the <code class="prettyprint">Authorization</code> Header</li>
-<li>Response Header and body include your newly generated <code class="prettyprint">api-key</code></li>
-</ul>
-
-<p>Also, you can regenerate the key at <a href="https://api.mwwondemand.com/account/user/api-key">https://api.mwwondemand.com/account/user/api-key</a>.</p>
+<p>For any issues with regenerating an API key please contact your MWW representative.</p>
