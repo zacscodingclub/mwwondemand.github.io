@@ -57,7 +57,7 @@ At present, the sections are:
 How to make changes:
 
 * Make changes on your fork and commit.
-* Run `./build.sh`.
+* Run `./deploy.sh`.
 * Create a Pull Request on to **upstream** `master` from your **origin** `master`.
 
 <!--
